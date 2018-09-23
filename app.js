@@ -1,10 +1,17 @@
 var msg = "Hello, world!"
 console.log(msg);
 
-var TelegramBot = require('node-telegram-bot-api');
+var DBMan = require('./dbman');
+
+DBMan.init(7);
+
+console.log(DBMan.get());
+
+/*var TelegramBot = require('node-telegram-bot-api');
 
 // Устанавливаем токен, который выдавал нам бот.
 var token = '656336982:AAEN9CazxfCX091eNkLwXb2GMCR2dpG8j_g';
+
 // Включить опрос сервера
 var bot = new TelegramBot(token, {polling: true});
 
@@ -22,3 +29,4 @@ bot.on('message', function (msg) {
     var photo = 'testimage.png';
     bot.sendPhoto(chatId, photo, {caption: 'Милые котята'});
 });
+*/
